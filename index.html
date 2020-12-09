@@ -15,15 +15,12 @@
 <body>
  <div class="login">
   
-  <section style="background-color: #d5d1d5;">
   <h1>Pollution Level Prediction   </h1>
      <h3> Enter the following values to predict the pollution level</h3>
      SO<sub>2</sub> ,NO<sub>2</sub>,O<sub>3</sub>
     <!-- SO<sub>2</sub> (Sulfur dioxide),NO<sub>2</sub> (Nitrogen dioxide),O<sub>3</sub> (Ozone)-->
      <!-- Main Input For Receiving Query to our ML -->
-  </section>
 
-  <section>
   <form action="{{ url_for('predict')}}"method="post">
     <input type="float" min="0" name="enginesize" placeholder="Sulfur dioxide" required="required" />
     <input type="float" min="0"name="cylinders" placeholder="Nitrogen dioxide" required="required" />
@@ -31,11 +28,8 @@
     <button type="submit" class="btn">Predict</button>
     </form>
     <br>
-  </section>
 
-  <section>
    {{ prediction_text }}
-  </section>
 
 </div>
 
